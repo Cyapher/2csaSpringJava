@@ -3,10 +3,6 @@ package com.csa.samplefullstack.entity;
 import javax.persistence.*;
 //import lombok.Data;
 
-/**
- *
- * @author Carlos Diaz
- */
 @Entity
 @Table(name="tbl_employee")
 //@Data - lombok; provides each data getters and setters
