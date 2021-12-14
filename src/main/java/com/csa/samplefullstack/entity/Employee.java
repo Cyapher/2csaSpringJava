@@ -3,6 +3,7 @@ package com.csa.samplefullstack.entity;
 import javax.persistence.*;
 //import lombok.Data;
 
+
 @Entity
 @Table(name="tbl_employee")
 //@Data - lombok; provides each data getters and setters
@@ -10,12 +11,12 @@ public class Employee {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int employeeid;
+    private Long employeeid;
     private String name;
     private String department;
     private String location;
 
-    public Employee(int employeeid, String name, String department, String location) {
+    public Employee(Long employeeid, String name, String department, String location) {
         this.employeeid = employeeid;
         this.name = name;
         this.department = department;
@@ -27,7 +28,7 @@ public class Employee {
         //when initializing w/o parameters
     }
 
-    public int getEmployeeid() {
+    public Long getEmployeeid() {
         return employeeid;
     }
 
@@ -43,7 +44,7 @@ public class Employee {
         return location;
     }
 
-    public void setEmployeeid(int employeeid) {
+    public void setEmployeeid(Long employeeid) {
         this.employeeid = employeeid;
     }
 
